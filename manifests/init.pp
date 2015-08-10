@@ -36,7 +36,7 @@ class citrix_ica {
             }
         }
         'Darwin': { warning("citrix_ica not yet implemented on Macs") }
-        default: { unimplemented() }
+        default: { fail "unimplemented on ${::osfamily}" }
     }
     include pki::ca_certs::citrix_receiver
 }
